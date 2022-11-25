@@ -10,13 +10,7 @@ pipeline{
                 }
             }
         } 
-        stage('Code Quality Checks') {
-            steps {
-                sh "echo SonarChecksInProgress"   
-
-            }
-        }     
-
+    
     }   // end of stages 
 }  // end of pipelines
 
