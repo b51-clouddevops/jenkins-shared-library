@@ -4,6 +4,8 @@ def info(message, URL) {
 
 info("DevOps", "cloud.com")
 
-def call()
-    echo "I am called by default"
-    
+def call() {
+        echo "I am called by default"
+}
+
+sample.info()
