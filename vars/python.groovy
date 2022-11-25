@@ -1,5 +1,5 @@
 def lintChecks() {
-    sh "echo "
+    sh "echo list checks started for payment * * * * ......"
     sh "echo Lint Checks Completed for $COMPONENT"
 }
 
