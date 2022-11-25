@@ -1,5 +1,5 @@
-def info(message) { 
+def info(message, URL) { 
     echo "Info: ${message}"
 }
 
-info()
+info("DevOps")
