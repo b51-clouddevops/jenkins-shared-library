@@ -3,3 +3,7 @@ def info(message, URL) {
 }
 
 info("DevOps", "cloud.com")
+
+def call()
+    echo "I am called by default"
+    
