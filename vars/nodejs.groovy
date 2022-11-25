@@ -1,4 +1,4 @@
-
+def call() {
     pipeline{
         agent any 
         stages {
@@ -11,7 +11,7 @@
             }     
         }   // end of stages 
     }  // end of pipelines
-
+} // end of call
 
 
 
