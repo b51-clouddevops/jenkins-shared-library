@@ -1,4 +1,4 @@
-def lintChecks() {
+def lintChecks(COMPONENT) {
         sh "echo installing jslinst"
         sh "npm i jslint"   
         sh "node_modules/jslint/bin/jslint.js server.js || true"
