@@ -2,7 +2,7 @@ def lintChecks(COMPONENT) {
         sh "echo installing jslinst"
         sh "npm i jslint"   
         sh "node_modules/jslint/bin/jslint.js server.js || true"
-        sh "echo Lint Checks Completed"
+        sh "echo Lint Checks Completed for $COMPONENT"
 }
 
 
@@ -14,7 +14,7 @@ def call() {
             stage('Lint Checks') {
                 steps {
                     script {
-                        lintChecks()                  // Use script { when you're using groovy based conventions }
+                        lintChecks(COMPONENT)                  // Use script { when you're using groovy based conventions }
                     }
                 }
             }     
