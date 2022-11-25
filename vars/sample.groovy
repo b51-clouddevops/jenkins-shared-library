@@ -1,2 +1,5 @@
-def info(message) 
+def info(message) { 
     echo "Info: ${message}"
+}
+
+info()
