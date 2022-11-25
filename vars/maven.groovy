@@ -1,6 +1,6 @@
 def lintChecks() {
-        sh "mvn checkstyle:check || true"
-        sh "echo Lint Checks Completed for $COMPONENT"
+    sh "mvn checkstyle:check || true"
+    sh "echo Lint Checks Completed for $COMPONENT"
 }
 
 
