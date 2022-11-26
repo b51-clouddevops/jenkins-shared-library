@@ -5,7 +5,7 @@ def lintChecks() {
         sh "echo Lint Checks Completed for $COMPONENT"
 }
 
-def lintChecks() {
+def sonarChecks() {
         sh "echo Starting Code Quality Analysis"
         sh "sonar-scanner -Dsonar.host.url=http://172.31.0.59:9000 -Dsonar.projectKey=${COMPONENT} -Dsonar.sources=."
 }
@@ -27,7 +27,7 @@ def call() {
             stage('Sonar Checks') {
                 steps {
                     script {
-                        lintChecks()                  // Use script { when you're using groovy based conventions }
+                        sonarChecks()                  // Use script { when you're using groovy based conventions }
                     }
                 }
             } 
