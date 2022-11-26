@@ -5,6 +5,10 @@ def lintChecks() {
         sh "echo Lint Checks Completed for $COMPONENT"
 }
 
+def lintChecks() {
+        sh "echo installing jslinst"
+
+
 
 // function call will be called by default, when you call the fileName
 def call() {
