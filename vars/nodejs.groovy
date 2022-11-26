@@ -15,7 +15,10 @@ def sonarChecks() {
 // function call will be called by default, when you call the fileName
 def call() {
     pipeline{
-        agent any 
+        agent any
+        environment {
+            SONAR = credentails
+        } 
         stages {
             stage('Lint Checks') {
                 steps {
