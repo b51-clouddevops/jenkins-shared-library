@@ -5,7 +5,6 @@ def lintChecks() {
         sh "echo Lint Checks Completed for $COMPONENT"
 }
 
-
 // function call will be called by default, when you call the fileName
 def call() {
     pipeline{
@@ -26,7 +25,7 @@ def call() {
             stage('Sonar Checks') {
                 steps {
                     script {
-                        sonarChecks()                  // Use script { when you're using groovy based conventions }
+                        common.sonarChecks()                  // Use script { when you're using groovy based conventions }
                     }
                 }
             } 

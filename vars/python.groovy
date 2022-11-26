@@ -19,7 +19,7 @@ def call() {
             stage('Sonar Checks') {
                 steps {
                     script {
-                        sonarChecks()                  // Use script { when you're using groovy based conventions }
+                        common.sonarChecks()                  // Use script { when you're using groovy based conventions }
                     }
                 }
             }
