@@ -20,7 +20,16 @@ def call() {
                         lintChecks()                  // Use script { when you're using groovy based conventions }
                     }
                 }
-            }     
+            }
+
+            stage('Sonar Checks') {
+                steps {
+                    script {
+                        sonarChecks()                  // Use script { when you're using groovy based conventions }
+                    }
+                }
+            }
+
         }   // end of stages 
     }  // end of pipelines
 } // end of call
