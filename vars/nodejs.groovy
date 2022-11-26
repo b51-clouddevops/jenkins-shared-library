@@ -31,7 +31,12 @@ def call() {
                     }
                 }
             } 
-
+            stage('XYZ Checks') {
+                steps {
+                    sh "echo Performing XYZ Checks"
+                    sh "echo this takes 30 mins"
+                }
+            } 
         }   // end of stages 
     }  // end of pipelines
 } // end of call
