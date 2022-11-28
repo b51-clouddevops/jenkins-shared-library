@@ -13,6 +13,7 @@ def call() {
             SONAR    = credentials('SONAR')
             NEXUS    = credentials('NEXUS')
             SONARURL = "172.31.0.59"
+            NEXUSURL = "172.31.2.247"
         } 
         stages {
             stage('Lint Checks') {
@@ -63,7 +64,7 @@ def call() {
             stage('Uploading Artifacts') {
                 when { expression { env.TAG_NAME != null } }
                 steps {
-                    sh "curl -v -u ${NEXUS_USR}:${NEXUS_PSW} --upload-file pom.xml http://${}:8081/repository/maven-releases/org/foo/1.0/foo-1.0.pom"
+                    sh "curl -v -u ${NEXUS_USR}:${NEXUS_PSW} --upload-file pom.xml http://${NEXUSURL}:8081/repository/maven-releases/org/foo/1.0/foo-1.0.pom"
                 }
             }
         }   // end of stages 
