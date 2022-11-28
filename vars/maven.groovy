@@ -31,17 +31,22 @@ def call() {
             }     
             stage('Test Cases') {
                 parallel {
-                stage('Unit Testing') {                 
-                steps {
-                        sh "echo Unit Testing Completed"   
+                    stage('Unit Testing') {                 
+                        steps {
+                            sh "echo Unit Testing Completed"   
+                                }
                             }
-                        }
-                    }         
-                }
-            }   
-        }   // end of stages 
-    }  // end of pipelines
-} // end of call
+                    stage('Unit Testing') {                 
+                        steps {
+                            sh "echo Unit Testing Completed"   
+                                }
+                            }
+                        }         
+                    }
+                }   
+            }   // end of stages 
+        }  // end of pipelines
+    } // end of call
 
 
 
