@@ -23,7 +23,7 @@ def call() {
             stage('Sonar Checks') {
                 steps {
                     script {
-                        sh "mvn clean compine"
+                        sh "mvn clean compile"
                         env.ARGS="-Dsonar.java.binaries=target/"
                         common.SonarChecks()                  // Use script { when you're using groovy based conventions }
                     }
