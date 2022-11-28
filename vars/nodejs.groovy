@@ -50,8 +50,8 @@ def call() {
                             }
                         }         
                     }
-            stage('') {
-                
+            stage('Prepare Artifacts') {
+
             }
                 }   // end of stages 
             }  // end of pipelines
