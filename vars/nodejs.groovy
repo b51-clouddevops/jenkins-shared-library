@@ -54,7 +54,8 @@ def call() {
             stage('Prepare Artifacts') {
                 when { expression { env.TAG_NAME != null } }
                 steps {
-                    sh "echo making artifacts"
+                    sh "npm install"
+                    sh "zip "
                 }
             }
 
