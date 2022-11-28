@@ -43,7 +43,7 @@ def call() {
                             }
                     stage('Function Testing') {                 
                         steps {
-                            sh "echo Integration Testing Completed"   
+                            sh "echo Function Testing Completed"   
                                 }
                             }
                         }         
