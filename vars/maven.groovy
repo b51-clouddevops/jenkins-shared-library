@@ -31,9 +31,11 @@ def call() {
             }     
             stage('Test Cases') {
                 parallel {
-                    
+                stage('Unit Testing')    
+                 
                 steps {
                         sh "echo Unit Testing Completed"   
+                        }
                     }         
                 }
             }   
