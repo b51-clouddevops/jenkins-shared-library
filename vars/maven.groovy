@@ -24,7 +24,7 @@ def call() {
                 steps {
                     script {
                         sh "mvn clean compine"
-                        common.mavenSonarChecks()                  // Use script { when you're using groovy based conventions }
+                        common.SonarChecks()                  // Use script { when you're using groovy based conventions }
                     }
                 }
             }     
