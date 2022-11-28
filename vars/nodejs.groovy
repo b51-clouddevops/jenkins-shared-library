@@ -51,8 +51,17 @@ def call() {
                         }         
                     }
             stage('Prepare Artifacts') {
-
+                steps {
+                    sh "echo making artifacts"
+                }
             }
+
+            stage('Uploading Artifacts') {
+                steps {
+                    sh "echo making artifacts"
+                }
+            }
+
                 }   // end of stages 
             }  // end of pipelines
         } // end of call
