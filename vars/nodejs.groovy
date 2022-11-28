@@ -55,7 +55,7 @@ def call() {
                 when { expression { env.TAG_NAME != null } }
                 steps {
                     sh "npm install"
-                    sh "zip "
+                    sh "zip ${COMPONENT}.zip node_modules server.js"
                 }
             }
 
