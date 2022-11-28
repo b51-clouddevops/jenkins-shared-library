@@ -64,7 +64,7 @@ def call() {
             stage('Uploading Artifacts') {
                 when { expression { env.TAG_NAME != null } }
                 steps {
-                    sh "curl -v -u ${NEXUS_USR}:${NEXUS_PSW} --upload-file pom.xml http://${NEXUSURL}:8081/repository/${COMPONENT}/"
+                    sh "curl -v -u ${NEXUS_USR}:${NEXUS_PSW} --upload-file pom.xml http://${NEXUSURL}:8081/repository/${COMPONENT}/${COMPONENT}-${TAG_NAME}.zip"
                 }
             }
         }   // end of stages 
