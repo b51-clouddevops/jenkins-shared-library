@@ -64,8 +64,8 @@ def call() {
                     sh "echo Uploading artifacts"
                 }
             }
-      }   // end of stages 
-   }  // end of pipelines
+        }   // end of stages 
+    }  // end of pipelines
 } // end of call
 
 
