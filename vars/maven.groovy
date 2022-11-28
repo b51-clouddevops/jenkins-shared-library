@@ -36,9 +36,14 @@ def call() {
                             sh "echo Unit Testing Completed"   
                                 }
                             }
-                    stage('Unit Testing') {                 
+                    stage('Integration Testing') {                 
                         steps {
-                            sh "echo Unit Testing Completed"   
+                            sh "echo Integration Testing Completed"   
+                                }
+                            }
+                    stage('Integration Testing') {                 
+                        steps {
+                            sh "echo Integration Testing Completed"   
                                 }
                             }
                         }         
