@@ -50,7 +50,9 @@ def call() {
                             }
                         }         
                     }
+            stage('') {
                 
+            }
                 }   // end of stages 
             }  // end of pipelines
         } // end of call
