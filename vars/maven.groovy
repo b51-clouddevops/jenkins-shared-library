@@ -23,7 +23,8 @@ def call() {
             stage('Sonar Checks') {
                 steps {
                     script {
-                        common.sonarChecks()                  // Use script { when you're using groovy based conventions }
+                        sh "mvn clean compine"
+                        common.mavenSonarChecks()                  // Use script { when you're using groovy based conventions }
                     }
                 }
             }     
