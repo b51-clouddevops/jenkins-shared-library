@@ -11,7 +11,7 @@ def call() {
         agent any
         environment {
             SONAR    = credentials('SONAR')
-            NEXUS    = credentials('SONAR')
+            NEXUS    = credentials('NEXUS')
             SONARURL = "172.31.0.59"
         } 
         stages {
@@ -63,7 +63,7 @@ def call() {
             stage('Uploading Artifacts') {
                 when { expression { env.TAG_NAME != null } }
                 steps {
-                    sh "curl -v -u admin:admin123 --upload-file pom.xml http://localhost:8081/repository/maven-releases/org/foo/1.0/foo-1.0.pom"
+                    sh "curl -v -u ${NEXUS_USR}:${NEXUS_PSW} --upload-file pom.xml http://${}:8081/repository/maven-releases/org/foo/1.0/foo-1.0.pom"
                 }
             }
         }   // end of stages 
