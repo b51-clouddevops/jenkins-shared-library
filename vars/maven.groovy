@@ -25,7 +25,7 @@ def call() {
                     script {
                         sh "mvn clean compile"
                         env.ARGS="-Dsonar.java.binaries=target/"
-                        common.SonarChecks()                  // Use script { when you're using groovy based conventions }
+                        common.sonarChecks()                  // Use script { when you're using groovy based conventions }
                     }
                 }
             }     
