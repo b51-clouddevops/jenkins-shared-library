@@ -29,6 +29,14 @@ def call() {
                     }
                 }
             }     
+            stage('Test Cases') {
+                steps {
+                    script {
+                        sh "mvn clean compile"
+            
+                    }
+                }
+            }   
         }   // end of stages 
     }  // end of pipelines
 } // end of call
