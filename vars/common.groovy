@@ -6,6 +6,8 @@ def sonarChecks() {
 }
 
 def lintChecks() {
+   stage('Lint Checks')
+        
         sh "echo installing jslinst"
         sh "npm i jslint"   
         sh "node_modules/jslint/bin/jslint.js server.js || true"
