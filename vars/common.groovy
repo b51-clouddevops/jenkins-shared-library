@@ -26,7 +26,8 @@ def lintChecks() {
                 sh "echo Lint Checks Completed for $COMPONENT"       
         }
         else 
-                
+                sh "echo doing generic lint check"
+
 
    }
 }
