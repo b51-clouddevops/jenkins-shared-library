@@ -4,3 +4,10 @@ def sonarChecks() {
         // sh "bash -x sonar-quality-gate.sh ${SONAR_USR} ${SONAR_PSW} ${SONARURL} ${COMPONENT}" 
         sh "echo Code Quality Analysis is Completed"
 }
+
+def lintChecks() {
+        sh "echo installing jslinst"
+        sh "npm i jslint"   
+        sh "node_modules/jslint/bin/jslint.js server.js || true"
+        sh "echo Lint Checks Completed for $COMPONENT"
+}
