@@ -57,7 +57,7 @@ def call() {
                 when { expression { env.TAG_NAME != null } }
                 steps {
                     script {
-                        def UPLOAD_STATUS=sh(returnStdout: true, script: "")
+                        def UPLOAD_STATUS=sh(returnStdout: true, script: "curl -s http://$:8081/service/rest/repository/browse/catalogue/ | grep 0.0.1")
                     }
                     sh "npm install"
                     sh "zip -r ${COMPONENT}-${TAG_NAME}.zip node_modules server.js"
