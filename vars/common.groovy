@@ -6,10 +6,11 @@ def sonarChecks() {
 }
 
 def lintChecks() {
-   stage('Lint Checks')
-        
+   stage('Lint Checks') {
+        if(env.APPTYPE == "nodejs")
         sh "echo installing jslinst"
         sh "npm i jslint"   
         sh "node_modules/jslint/bin/jslint.js server.js || true"
         sh "echo Lint Checks Completed for $COMPONENT"
+   }
 }
