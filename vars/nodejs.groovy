@@ -58,6 +58,7 @@ def call() {
                 steps {
                     script {
                         def UPLOAD_STATUS=sh(returnStdout: true, script: "curl -s http://${NEXUSURL}:8081/service/rest/repository/browse/${COMPONENT}/ | grep ${COMPONENT}-${TAG_NAME}.zip")
+                        print UPLOAD_STATUS
                     }
                 }
             }
