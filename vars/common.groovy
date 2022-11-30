@@ -18,8 +18,10 @@ def lintChecks() {
                 sh "echo Lint Checks Completed for $COMPONENT"               
         }
         else if(env.APPTYPE == "python") {
-                sh "mvn checkstyle:check || true"
-                sh "echo Lint Checks Completed for $COMPONENT"               
+                sh "echo list checks started for payment * * * * ......"
+                sh "echo Lint Checks Completed for $COMPONENT"       
         }
+        else 
+                
    }
 }
