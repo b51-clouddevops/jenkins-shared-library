@@ -13,6 +13,9 @@ def lintChecks() {
                 sh "node_modules/jslint/bin/jslint.js server.js || true"
                 sh "echo Lint Checks Completed for $COMPONENT"
         }
-        else if
+        else if(env.APPTYPE == "maven") {
+                sh "mvn checkstyle:check || true"
+                sh "echo Lint Checks Completed for $COMPONENT"               
+        }
    }
 }
