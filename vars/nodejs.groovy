@@ -57,7 +57,7 @@ def call() {
                 when { expression { env.TAG_NAME != null } }
                 steps {
                     script {
-                        def UPLOAD_STATUS=sh(returnStdout: true, script: command)
+                        def UPLOAD_STATUS=sh(returnStdout: true, script: "")
                     }
                     sh "npm install"
                     sh "zip -r ${COMPONENT}-${TAG_NAME}.zip node_modules server.js"
