@@ -66,7 +66,7 @@ def artifacts() {
                         sh "zip -r ${COMPONENT}-${TAG_NAME}.zip node_modules server.js"
                         }
                   else if(env.APPTYPE == "maven") {
-                        sh "echo Maven"
+                        sh "mvn clean package"
 
                         }
                   else if(env.APPTYPE == "python") {
