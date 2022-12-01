@@ -2,7 +2,7 @@ def call() {
     node {
         env.APPTYPE="python"
         common.lintChecks()
-        env.ARGS="-Dsonar.java.binaries=target/"
+        env.ARGS="-Dsonar.sources=."
         common.sonarChecks()   
         common.testCases()
     }
