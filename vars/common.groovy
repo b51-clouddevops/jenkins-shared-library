@@ -61,7 +61,8 @@ def artifacts() {
         
         if(env.UPLOAD_STATUS == "") {
                 stage('Prepare Artifacts'){
-                        
+                    sh "npm install"
+                    sh "zip -r ${COMPONENT}-${TAG_NAME}.zip node_modules server.js"
                 }
 
         }
