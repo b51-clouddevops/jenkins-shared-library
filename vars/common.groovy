@@ -73,16 +73,16 @@ def artifacts() {
                         }
                   else if(env.APPTYPE == "python") {
                         sh ''' 
-                         zip -r ${COMPONENT}-${TAG_NAME}.zip *.py *.ini requirements.txt
+                                zip -r ${COMPONENT}-${TAG_NAME}.zip *.py *.ini requirements.txt
 
                            ''' 
 
                         }
                   else if(env.APPTYPE == "angularjs") {
                         sh '''  
-                        cd static 
-                        zip -r ../${COMPONENT}-${TAG_NAME}.zip *
-                        ls -ltr
+                                cd static 
+                                zip -r ../${COMPONENT}-${TAG_NAME}.zip *
+                                ls -ltr
                         '''
 
                         }
