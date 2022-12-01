@@ -33,6 +33,21 @@ def lintChecks() {
         }
 }
 
+def testCases() {
+ parallel(
+                "StageA": {
+                    stage("stage A") {
+                        echo "This is branch a"
+                           }
+                     },
+               "StageB": {
+                            stage("stage B") {
+                                echo "This is branch b"
+                            }
+                        }
+                )
+}
+
 // def testCases() {
 //         stage('Test Cases') {
 //           parallel {
