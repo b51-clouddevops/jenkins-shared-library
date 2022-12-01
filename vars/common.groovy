@@ -92,6 +92,8 @@ def artifacts() {
 }
 
 
+// Credentials Usage Reference : https://schneide.blog/2021/06/02/using-credentials-in-scripted-jenkins-pipelines/
+
 //             stage('Prepare Artifacts') {
 //                 when { 
 //                     expression { env.TAG_NAME != null } 
