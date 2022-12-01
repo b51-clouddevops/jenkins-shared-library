@@ -28,6 +28,5 @@ def lintChecks() {
         else 
                 sh "echo doing generic lint check"
 
-
-   }
+        }
 }
