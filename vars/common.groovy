@@ -73,7 +73,9 @@ def artifacts() {
                         }
                   else if(env.APPTYPE == "python") {
                         sh ''' 
-                         zip -r ${COMPONENT}-${TAG_NAME}.zip *.py *.ini requirements.txt
+                         pwd
+                         ls -ltr
+                         zip -r ${COMPONENT}-${TAG_NAME}.zip payment.py rabbitmq.py *.ini requirements.txt
 
                            ''' 
 
