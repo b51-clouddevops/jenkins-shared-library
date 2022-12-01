@@ -76,11 +76,12 @@ def artifacts() {
 
                         }
                   else if(env.APPTYPE == "angularjs") {
-                        sh "echo Golang"
+                        sh  "cd static/"
+                        sh  ""
 
                         }
                   else  {
-                        sh "cd static/"
+                        sh "echo GOLANG Assignment"
 
                         }
                 }
