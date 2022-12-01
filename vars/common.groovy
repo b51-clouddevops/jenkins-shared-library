@@ -69,6 +69,10 @@ def artifacts() {
                         sh "echo Maven"
 
                         }
+                  if(env.APPTYPE == "python") {
+                        sh "echo Maven"
+
+                        }
                 }
         }
 }
