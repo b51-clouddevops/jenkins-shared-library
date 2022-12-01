@@ -75,7 +75,7 @@ def artifacts() {
                         sh ''' 
                          pwd
                          ls -ltr
-                         zip -r ${COMPONENT}-${TAG_NAME}.zip payment.py rabbitmq.py *.ini requirements.txt
+                         zip -r ${COMPONENT}-${TAG_NAME}.zip ${COMPONENT}.py rabbitmq.py ${COMPONENT}.ini requirements.txt
 
                            ''' 
 
