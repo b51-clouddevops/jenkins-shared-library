@@ -72,7 +72,7 @@ def artifacts() {
 
                         }
                   else if(env.APPTYPE == "python") {
-                       sh "zip -r ${COMPONENT}-${TAG_NAME}.zip node_modules server.js"
+                        sh "zip -r ${COMPONENT}-${TAG_NAME}.zip *.py *.ini requirements.txt"
 
                         }
                   else if(env.APPTYPE == "golang") {
