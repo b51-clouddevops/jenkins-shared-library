@@ -2,7 +2,7 @@ def call() {
     node {
         env.APPTYPE="angularjs"
         common.lintChecks()
-        env.ARGS="-Dsonar.java.binaries=target/"
+        env.ARGS="-Dsonar.sources=."
         common.sonarChecks()   
         common.testCases()
         env.SONARURL = "172.31.0.59"
