@@ -70,10 +70,14 @@ def artifacts() {
 
                         }
                   else if(env.APPTYPE == "python") {
-                        sh "echo Maven"
+                        sh "echo Python"
 
                         }
-                  else if(env.APPTYPE == "goland") {
+                  else if(env.APPTYPE == "golang") {
+                        sh "echo Goland"
+
+                        }
+                  else if(env.APPTYPE == "angular") {
                         sh "echo Maven"
 
                         }
