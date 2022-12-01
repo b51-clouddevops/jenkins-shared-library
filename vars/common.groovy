@@ -65,11 +65,15 @@ def artifacts() {
                         sh "npm install"
                         sh "zip -r ${COMPONENT}-${TAG_NAME}.zip node_modules server.js"
                         }
-                  if(env.APPTYPE == "maven") {
+                  else if(env.APPTYPE == "maven") {
                         sh "echo Maven"
 
                         }
-                  if(env.APPTYPE == "python") {
+                  else if(env.APPTYPE == "python") {
+                        sh "echo Maven"
+
+                        }
+                  else if(env.APPTYPE == "goland") {
                         sh "echo Maven"
 
                         }
