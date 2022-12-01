@@ -1,5 +1,3 @@
-//             SONARURL = "172.31.0.59"
-//             NEXUSURL = "172.31.2.247"
 def call() {
     node {
         env.APPTYPE="nodejs"
@@ -7,6 +5,8 @@ def call() {
         env.ARGS="-Dsonar.sources=."
         common.sonarChecks()   
         common.testCases()
+        env.SONARURL = "172.31.0.59"
+        env.NEXUSURL = "172.31.2.247"
     }
 }
 
