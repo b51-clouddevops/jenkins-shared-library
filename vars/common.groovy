@@ -73,8 +73,7 @@ def artifacts() {
                         }
                   else if(env.APPTYPE == "python") {
                         sh ''' 
-                         pwd
-                         ls -ltr
+
                          zip -r ${COMPONENT}-${TAG_NAME}.zip *.py *.ini requirements.txt
 
                            ''' 
