@@ -45,8 +45,8 @@ def lintChecks() {
                     }
                 stage('Function Testing') {                 
                       steps {
-                            sh "echo Function Testing Completed"   
+                        sh "echo Function Testing Completed"   
                                 }
-                            }
-                        }         
-                    }
+                        }
+                }         
+        }
