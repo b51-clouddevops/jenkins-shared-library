@@ -53,6 +53,10 @@ def testCases() {
                 )
         }
 
+def artifacts() {
+        stage('Check Artifacts')
+}
+
 //             stage('Chekcing Artifacts') {
 //                 when { expression { env.TAG_NAME != null } }
 //                 steps {
