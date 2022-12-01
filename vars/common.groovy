@@ -54,7 +54,9 @@ def testCases() {
         }
 
 def artifacts() {
-        stage('Check Artifacts')
+        stage('Check Artifacts') {
+                
+        }
 }
 
 //             stage('Chekcing Artifacts') {
