@@ -59,7 +59,9 @@ def artifacts() {
            print UPLOAD_STATUS                
         }
         
-        if()
+        if(env.UPLOAD_STATUS == "") {
+                
+        }
 
 }
 
