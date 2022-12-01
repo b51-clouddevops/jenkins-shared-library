@@ -78,10 +78,13 @@ def artifacts() {
 
                         }
                   else if(env.APPTYPE == "angular") {
-                        sh "echo Maven"
+                        sh "echo angular"
 
                         }
                 }
+
+                stage
+
         }
 }
 
