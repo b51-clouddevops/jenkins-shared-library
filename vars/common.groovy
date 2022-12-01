@@ -66,8 +66,8 @@ def artifacts() {
                         sh "zip -r ${COMPONENT}-${TAG_NAME}.zip node_modules server.js"
                         }
                   if(env.APPTYPE == "maven") {
-                        sh "npm install"
-                        sh "zip -r ${COMPONENT}-${TAG_NAME}.zip node_modules server.js"
+                        sh "echo Maven"
+
                         }
                 }
         }
