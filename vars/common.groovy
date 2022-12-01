@@ -35,19 +35,19 @@ def lintChecks() {
 
 def testCases() {
  parallel(
-                "StageA": {
+                "UNIT": {
                     stage("Unit Testing") {
                         echo "Unit Testing Compleyed"
                            }
                      },
-               "StageB": {
+               "INTEGRATION": {
                     stage("Integration Testing") {
                         echo "Integration Testing"
                    }
             }
-               "StageC": {
-                    stage("Integration Testing") {
-                        echo "Integration Testing"
+               "Fu": {
+                    stage("Functional Testing") {
+                        echo "Functional Testing"
                    }
             }
         )
