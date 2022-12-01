@@ -83,7 +83,9 @@ def artifacts() {
                         }
                 }
 
-                stage
+                stage('Upload Artifacts') {
+                        
+                }
 
         }
 }
