@@ -1,3 +1,4 @@
+env.APPTYPE="nodejs"
 def call() {
     node {
         common.lintChecks()
