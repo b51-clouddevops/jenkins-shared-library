@@ -86,7 +86,6 @@ def artifacts() {
                 stage('Upload Artifacts') {
                       sh "curl -f -v -u ${NEXUS_USR}:${NEXUS_PSW} --upload-file ${COMPONENT}-${TAG_NAME}.zip http://${NEXUSURL}:8081/repository/${COMPONENT}/${COMPONENT}-${TAG_NAME}.zip"  
                 }
-
         }
 }
 
