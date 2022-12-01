@@ -36,12 +36,12 @@ def lintChecks() {
 def testCases() {
  parallel(
                 "StageA": {
-                    stage("stage A") {
-                        echo "This is branch a"
+                    stage("Unit Testing") {
+                        echo "Unit Testing Compleyed"
                            }
                      },
                "StageB": {
-                    stage("stage B") {
+                    stage("Integration Testing") {
                         echo "This is branch b"
                    }
             }
