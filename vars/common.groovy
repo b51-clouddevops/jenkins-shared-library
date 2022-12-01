@@ -93,7 +93,10 @@ def artifacts() {
 
                         }
                   else  {
-                        sh "echo GOLANG Assignment"
+                        sh ''' 
+                                echo GOLANG Assignment
+
+                           ''' 
 
                         }
                 }
