@@ -43,8 +43,8 @@ def testCases() {
                "INTEGRATION": {
                     stage("Integration Testing") {
                         echo "Integration Testing"
-                   }
-            }
+                                }
+                }
                "FUNCTIONAL": {
                     stage("Functional Testing") {
                         echo "Functional Testing"
