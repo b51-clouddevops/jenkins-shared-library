@@ -76,11 +76,11 @@ def artifacts() {
 
                         }
                   else if(env.APPTYPE == "golang") {
-                        sh "echo Goland"
+                        sh "echo Golang"
 
                         }
-                  else if(env.APPTYPE == "angular") {
-                        sh "echo angular"
+                  else  {
+                        sh "cd static"
 
                         }
                 }
