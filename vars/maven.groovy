@@ -1,6 +1,10 @@
 def call() {
     node {
-        common.lintChecks
+        env.APPTYPE="maven"
+        common.lintChecks()
+       env.ARGS="-Dsonar.java.binaries=target/"
+        common.sonarChecks()   
+        common.testCases()
     }
 }
 
