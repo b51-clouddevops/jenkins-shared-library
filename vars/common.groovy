@@ -67,6 +67,7 @@ def artifacts() {
                         }
                   else if(env.APPTYPE == "maven") {
                         sh "mvn clean package"
+                        sh "mv target/${COMPONENT}-1.0.jar ${COMPONENT}.jar"
 
                         }
                   else if(env.APPTYPE == "python") {
