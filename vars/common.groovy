@@ -41,11 +41,11 @@ def testCases() {
                            }
                      },
                "StageB": {
-                            stage("stage B") {
-                                echo "This is branch b"
-                            }
-                        }
-                )
+                    stage("stage B") {
+                        echo "This is branch b"
+                   }
+            }
+        )
 }
 
 // def testCases() {
