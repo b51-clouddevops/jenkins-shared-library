@@ -31,6 +31,7 @@ def lintChecks() {
         }
 }
 
+def testCases() {
         stage('Test Cases') {
           parallel {
                 stage('Unit Testing') {                 
@@ -50,3 +51,4 @@ def lintChecks() {
                         }
                 }         
         }
+}
