@@ -75,12 +75,12 @@ def artifacts() {
                         sh "zip -r ${COMPONENT}-${TAG_NAME}.zip *.py *.ini requirements.txt"
 
                         }
-                  else if(env.APPTYPE == "golang") {
+                  else if(env.APPTYPE == "angularjs") {
                         sh "echo Golang"
 
                         }
                   else  {
-                        sh "cd static"
+                        sh "cd static/"
 
                         }
                 }
