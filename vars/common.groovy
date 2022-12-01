@@ -40,11 +40,11 @@ def lintChecks() {
                        }
                 stage('Integration Testing') {                 
                     steps {
-                            sh "echo Integration Testing Completed"   
-                                }
-                            }
-                    stage('Function Testing') {                 
-                        steps {
+                         sh "echo Integration Testing Completed"   
+                         }
+                    }
+                stage('Function Testing') {                 
+                      steps {
                             sh "echo Function Testing Completed"   
                                 }
                             }
