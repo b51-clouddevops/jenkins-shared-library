@@ -42,7 +42,12 @@ def testCases() {
                      },
                "StageB": {
                     stage("Integration Testing") {
-                        echo "This is branch b"
+                        echo "Integration Testing"
+                   }
+            }
+               "StageC": {
+                    stage("Integration Testing") {
+                        echo "Integration Testing"
                    }
             }
         )
