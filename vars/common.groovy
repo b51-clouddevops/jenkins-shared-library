@@ -45,7 +45,7 @@ def testCases() {
                         echo "Integration Testing"
                    }
             }
-               "Fu": {
+               "FUNCTIONAL": {
                     stage("Functional Testing") {
                         echo "Functional Testing"
                    }
