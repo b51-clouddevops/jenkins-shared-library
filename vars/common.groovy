@@ -60,7 +60,8 @@ def artifacts() {
         }
         
         if(env.UPLOAD_STATUS == "") {
-                
+        
+
         }
 
 }
