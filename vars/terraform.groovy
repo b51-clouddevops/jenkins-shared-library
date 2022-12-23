@@ -16,11 +16,17 @@ node {
 
                 sh ''' 
                     cd ${TERRAFORM_DIR}
-                sh "terrafile -f env-${ENV}/Terrafile"
-                sh "terraform init --backend-config=env-${ENV}/${ENV}-backend.tfvars"
-
+                    sh "terrafile -f env-${ENV}/Terrafile"
+                    sh "terraform init --backend-config=env-${ENV}/${ENV}-backend.tfvars"
                 '''
+            }
 
+        stage('Terraform Plan') {
+
+                sh ''' 
+                    cd ${TERRAFORM_DIR}
+                    terraform plan -var-file=env-${ENV}/${ENV}.tfvars"
+                '''
             }
         }
     }
