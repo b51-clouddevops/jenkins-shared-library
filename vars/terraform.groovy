@@ -14,6 +14,10 @@ node {
 
         stage('Terraform Init') {
 
+                sh ''' 
+                    
+                '''
+
             }
         }
     }
