@@ -13,7 +13,6 @@ node {
         git branch: 'main', url: "https://github.com/b51-clouddevops/${REPONAME}.git"
 
         stage('Terraform Init') {
-
                 sh ''' 
                     cd ${TERRAFORM_DIR}
                     terrafile -f env-${ENV}/Terrafile"
