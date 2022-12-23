@@ -1,5 +1,11 @@
 def call() {
-    
+
+properties([
+  parameters([
+    choice(name: 'color', defaultValue: 'blue', description: 'The build\'s color'),
+    ...
+  ])
+])
 }
 
 // pipeline {
