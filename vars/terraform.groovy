@@ -10,10 +10,13 @@ properties([
 
 node {
     ansiColor('xterm') {
-        
-    }
-}
+        git branch: 'main', url: "https://github.com/b51-clouddevops/${REPONAME}.git"
 
+        stage('Terraform Init') {
+
+            }
+        }
+    }
 }
 
 // pipeline {
