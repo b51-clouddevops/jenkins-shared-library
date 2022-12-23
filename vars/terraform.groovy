@@ -31,11 +31,13 @@ node {
 
         stage('Terraform Action') {
             steps {
+
                 sh ''' 
-                cd ${TERRAFORM_DIR}
-                sh "terraform ${ACTION} -var-file=env-${ENV}/${ENV}.tfvars -auto-approve "
+                    cd ${TERRAFORM_DIR}
+                    terraform ${ACTION} -var-file=env-${ENV}/${ENV}.tfvars -auto-approve
+                ''' 
+                }
             }
-        }
         }
     }
 }
