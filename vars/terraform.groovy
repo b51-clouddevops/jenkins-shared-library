@@ -2,7 +2,7 @@ def call() {
 
 properties([
   parameters([
-     choice(name: 'ENV', choices: 'dev\nprod', description: 'Chose the env to deploy')
+     choice(name: 'ENV', choices: 'dev\nprod', description: 'Chose the env to deploy'),
      choice(name: 'ACTION', choices: 'apply\ndestroy', description: 'Chose the action')
     
   ])
