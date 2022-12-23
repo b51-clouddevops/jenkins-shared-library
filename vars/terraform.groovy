@@ -2,8 +2,8 @@ def call() {
 
 properties([
   parameters([
-    choice(name: 'color', defaultValue: 'blue', description: 'The build\'s color'),
-    ...
+     choice(name: 'ENV', choices: ['dev', 'prod'],  description: 'Chose the env to deploy')
+    
   ])
 ])
 }
