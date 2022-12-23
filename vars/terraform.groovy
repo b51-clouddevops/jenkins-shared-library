@@ -16,8 +16,8 @@ node {
 
                 sh ''' 
                     cd ${TERRAFORM_DIR}
-                    sh "terrafile -f env-${ENV}/Terrafile"
-                    sh "terraform init --backend-config=env-${ENV}/${ENV}-backend.tfvars"
+                    terrafile -f env-${ENV}/Terrafile"
+                    terraform init --backend-config=env-${ENV}/${ENV}-backend.tfvars
                 '''
             }
 
@@ -25,9 +25,17 @@ node {
 
                 sh ''' 
                     cd ${TERRAFORM_DIR}
-                    terraform plan -var-file=env-${ENV}/${ENV}.tfvars"
+                    terraform plan -var-file=env-${ENV}/${ENV}.tfvars
                 '''
             }
+
+        stage('Terraform Action') {
+            steps {
+                sh ''' 
+                cd ${TERRAFORM_DIR}
+                sh "terraform ${ACTION} -var-file=env-${ENV}/${ENV}.tfvars -auto-approve "
+            }
+        }
         }
     }
 }
