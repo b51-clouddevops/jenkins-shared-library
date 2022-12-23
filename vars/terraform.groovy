@@ -15,7 +15,10 @@ node {
         stage('Terraform Init') {
 
                 sh ''' 
-                    
+                    cd ${TERRAFORM_DIR}
+                sh "terrafile -f env-${ENV}/Terrafile"
+                sh "terraform init --backend-config=env-${ENV}/${ENV}-backend.tfvars"
+
                 '''
 
             }
