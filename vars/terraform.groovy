@@ -7,6 +7,13 @@ properties([
     
   ])
 ])
+
+node {
+    ansiColor('xterm') {
+        
+    }
+}
+
 }
 
 // pipeline {
