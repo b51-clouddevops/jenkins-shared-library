@@ -4,7 +4,7 @@ properties([
   parameters([
      choice(name: 'ENV', choices: 'dev\nprod', description: 'Chose the env to deploy'),
      choice(name: 'ACTION', choices: 'apply\ndestroy', description: 'Chose the action')
-     string(name: 'APP_VERSION', choices: 'apply\ndestroy', description: 'Chose the action')
+     string(name: 'APP_VERSION', choices: 'APP_VERSION', description: 'Enter the name of the version to deploy')
     
   ])
 ])
