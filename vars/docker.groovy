@@ -6,5 +6,13 @@ def call() {
         stage('Docker Build') {
             sh "docker build -t 834725375088.dkr.ecr.us-east-1.amazonaws.com/${COMPONENT}:latest ."
         }
+    
+        if(env.TAG_NAME != null ) {
+        stage('Docker Push') {
+            
+            sh "docker build -t 834725375088.dkr.ecr.us-east-1.amazonaws.com/${COMPONENT}:latest ."
+         
+            }
+        }
     }
 }
