@@ -3,14 +3,14 @@ def call() {
         sh "rm -rf *"
         git branch: 'main', url: "https://github.com/b51-clouddevops/${COMPONENT}.git"
         
-        stage('Docker Build') {
-            sh "docker build -t 834725375088.dkr.ecr.us-east-1.amazonaws.com/${COMPONENT}:latest ."
-        }
+            stage('Docker Build') {
+                sh "docker build -t 834725375088.dkr.ecr.us-east-1.amazonaws.com/${COMPONENT}:latest ."
+             }
     
         if(env.TAG_NAME != null ) {
-        stage('Docker Push') {
+            stage('Docker Push') {
             
-            sh "docker build -t 834725375088.dkr.ecr.us-east-1.amazonaws.com/${COMPONENT}:latest ."
+                 sh "docker tag 834725375088.dkr.ecr.us-east-1.amazonaws.com/${COMPONENT}:latest 834725375088.dkr.ecr.us-east-1.amazonaws.com/${COMPONENT}:"
          
             }
         }
